@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS website layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+          margin: 0;
+        }
+        .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        }
+        .topnav{
+            overflow: hidden;
+            background: #333;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+        }
+        .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        @media screen and (max-width:600px) {
+        .column {
+            width: 100%;
+        }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+      </div>
+      <div class="topnav">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+
+      </div>
+      <div class="row">
+        <div class="column">
+            <h2>Column</h2>
+            <p>CSS stands for Cascading Style Sheet.
+                CSS is used to design HTML tags.
+                CSS is a widely used language on the web.
+                HTML, CSS and JavaScript are used for web designing. It helps the web designers to apply style on HTML tags.</p>
+        </div>
+        <div class="column">
+        <h2>column</h2>
+        <p>CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
+            CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.</p>
+        </div>
+
+      <div class="column">
+        <h2>column</h2>
+        <p>Before CSS, tags like font, color, background style, element alignments, border and size had to be repeated on every web page. This was a very long process. For example: If you are developing a large website where fonts and color information are added on every single page, it will be become a long and expensive process. CSS was created to solve this problem. It was a W3C recommendation.</p>
+      </div>
+      </div>
+      
+</body>
+</html>
